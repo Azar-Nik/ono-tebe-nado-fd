@@ -5,12 +5,6 @@
     padding: 95px 50px 100px;
 }
 
-.header__logo {
-    display: block;
-    width: 139px;
-    height: 105px;
-}
-
 .header__links-list {
     display: flex;
     list-style: circle;
@@ -26,6 +20,12 @@
 
 .menu-link_active {
     text-decoration: none;
+}
+
+.header__logo {
+    display: block;
+    width: 139px;
+    height: 105px;
 }
 
 .address {
@@ -44,6 +44,8 @@
 
 .cover {
     background-image: url(../images/cover.jpg);
+    background-position: center;
+    background-size: cover;
     min-height: 757px;
     position: relative;
     padding: 165px 50px 50px;
@@ -151,24 +153,20 @@
     justify-content: space-between;
     z-index: 0;
     padding: 48px 40px;
+    background-size: cover;
+    background-position: center;
 }
 
 .card_type_film {
-    background: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-    background: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-    background: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(../images/card-lot-03.jpg);
 }
 
 .card__title {
@@ -189,11 +187,13 @@
     margin-left: 40px;
     text-transform: lowercase;
     font-size: 20px;
+    max-width: fit-content;
 }
 
 .about {
     display: grid;
     grid-template-columns: 334px auto;
+    gap: 25px;
     margin: 120px 24px 0;
 }
 
@@ -218,14 +218,14 @@
     margin-top: 135px;
     font-size: 40px;
     text-transform: uppercase;
-    margin-left: 25px;
 }
 
 .about__text {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin: 100px 5px 0 25px;
+    margin-top: 100px;
+    margin-right: 5px;
     font-size: 20px;
     line-height: 24px;
 }
@@ -233,9 +233,9 @@
 .footer {
     margin-top: 180px;
     padding-top: 1px;
+    padding-bottom: 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 180px;
     gap: 40px;
     justify-items: center;
 }
@@ -247,10 +247,11 @@
     text-align: center;
 }
 
-.footer__social-list-item {
+.footer__social-list {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    list-style: none;
 }
 
 .footer__social-link {
